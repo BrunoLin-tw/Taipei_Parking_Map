@@ -1,0 +1,7 @@
+{
+  "name": "Taipei Parking Map",
+  "description": "Real-time visualization of Taipei City parking lot availability using TWD97 coordinate conversion and live data feeds.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
