@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app:cached
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      # 從 host 傳入 GEMINI_API_KEY（或使用 VITE_ 前綴的變數）
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
